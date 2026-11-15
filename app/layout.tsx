@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono, Figtree } from "next/font/google"
-
+import Header from "@/components/header";
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
@@ -25,7 +25,9 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable, geistHeading.variable)}
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <Header />
+          {children}</ThemeProvider>
       </body>
     </html>
   )
